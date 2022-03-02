@@ -1,20 +1,11 @@
 #!/bin/bash
 
-
 source /etc/profile.d/test.sh
-export test123=test123
-export
 
-aws
-if [ $? != 0 ]; then
-  echo "aws is bad"
-else
-  echo "aws is good"
-fi
-
-cat /etc/environment
+cat /tmp/ben
 if [ $? != 0 ]; then
   echo "cat is bad"
+  exit 1
 else
   echo "cat is good"
 fi
