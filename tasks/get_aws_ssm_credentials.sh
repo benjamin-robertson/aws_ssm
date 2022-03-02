@@ -2,6 +2,10 @@
 echo "check homedir"
 eval echo ~$USER
 
+source /etc/profile.d/test.sh 
+export
+env
+
 aws help
 /usr/bin/aws
 which aws
