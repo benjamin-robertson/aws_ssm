@@ -1,5 +1,7 @@
 #!/bin/sh
 aws
+/usr/bin/aws
+which aws
 echo "my token is"
 echo $PT_token
 echo "pe server is"
