@@ -1,10 +1,23 @@
 #!/bin/bash
 
 
-source /etc/profile.d/test.sh 
+source /etc/profile.d/test.sh
 export test123=test123
 export
 
+aws
+if [ $? != 0 ]; then
+  echo "aws is bad"
+else
+  echo "aws is good"
+fi
+
+cat /etc/environment
+if [ $? != 0 ]; then
+  echo "cat is bad"
+else
+  echo "cat is good"
+fi
 
 echo "my token is"
 echo $PT_token
