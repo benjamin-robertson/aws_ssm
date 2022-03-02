@@ -48,4 +48,8 @@ data="{\"config_data\":
       }"
 
 # Call the API
-curl -k --header "$type_header" --header "$auth_header" --request POST "$uri" --data "$data"
+curl -f -k --header "$type_header" --header "$auth_header" --request POST "$uri" --data "$data"
+if [ $? != 0 ]; then
+  echo "Bad authentication token or PE connection"
+  exit 1
+fi
