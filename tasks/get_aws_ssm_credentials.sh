@@ -1,4 +1,7 @@
 #!/bin/sh
 
-env
-export
+echo "my token is"
+echo $PT_token
+
+
+
