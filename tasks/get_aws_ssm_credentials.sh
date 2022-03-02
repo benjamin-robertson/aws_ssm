@@ -1,14 +1,11 @@
 #!/bin/sh
-echo "check homedir"
-eval echo ~$USER
+
 
 source /etc/profile.d/test.sh 
+export test123=test123
 export
-env
 
-aws help
-/usr/bin/aws
-which aws
+
 echo "my token is"
 echo $PT_token
 echo "pe server is"
