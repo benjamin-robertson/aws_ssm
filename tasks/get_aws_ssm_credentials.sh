@@ -2,7 +2,7 @@
 
 source /etc/profile.d/test.sh
 
-cat /tmp/ben
+cat /tmp/ben | grep test
 if [ $? != 0 ]; then
   echo "cat is bad"
   exit 1
