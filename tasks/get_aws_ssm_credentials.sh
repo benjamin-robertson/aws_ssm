@@ -1,12 +1,11 @@
 #!/bin/sh
-
+aws
 echo "my token is"
 echo $PT_token
 echo "pe server is"
 echo $PT_pe
 echo "group ID is"
 echo $PT_groupid
-
 
 
 # Get activation code, need to find a better way to do this. Possibly updare the aws script in use
