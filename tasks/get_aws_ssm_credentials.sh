@@ -1,4 +1,7 @@
 #!/bin/sh
+echo "check homedir"
+eval echo ~$USER
+
 aws help
 /usr/bin/aws
 which aws
