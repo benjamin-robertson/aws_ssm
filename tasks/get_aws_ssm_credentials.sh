@@ -1,5 +1,5 @@
 #!/bin/sh
-aws
+aws help
 /usr/bin/aws
 which aws
 echo "my token is"
