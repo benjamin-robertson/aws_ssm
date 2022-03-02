@@ -18,12 +18,12 @@ echo "my activation id is $activation_id"
 type_header='Content-Type: application/json'
 auth_header="X-Authentication: $PT_token"
 uri="https://$PT_pe:4433/classifier-api/v1/groups/$PT_groupid"
-data='{"config_data": 
-          {"profile::lab::aws_ssm": {
-               "activation_code": "$activation_code",
-               "activation_id": "$activation_id"}
+data="{\"config_data\": 
+          {\"profile::lab::aws_ssm\": {
+               \"activation_code\": \"$activation_code\",
+               \"activation_id\": \"$activation_id\"}
           }
-      }'
+      }"
 
 # Call the API
 curl -k --header "$type_header" --header "$auth_header" --request POST "$uri" --data "$data"
