@@ -7,9 +7,9 @@ echo $PT_pe
 echo "group ID is"
 echo $PT_groupid
 
-test=`/usr/local/bin/aws-get | grep Value | awk '{ print $36 }' | sed 's/\\n\\nActivation/I am here/'`
+test=$(/usr/local/bin/aws-get | grep Value | awk '{ print $36 }' | sed 's/\\n\\nActivation/I am here/')
 echo $test
-/usr/local/bin/aws-get | grep Value | awk '{ print $36 }'
+
 # Get activation code, need to find a better way to do this. Possibly updare the aws script in use
 activation_code=`/usr/local/bin/aws-get | grep Value | awk '{ print $36 }' | sed 's/\\n\\nActivation//'`
 echo "my activation code is $activation_code"
