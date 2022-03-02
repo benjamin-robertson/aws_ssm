@@ -25,6 +25,17 @@ echo "my activation code is $activation_code"
 activation_id=$(/usr/local/bin/aws-get | grep Value | awk '{ print $38 }')
 echo "my activation id is $activation_id"
 
+# Sanity checks, check the lenght of the code and the id
+if [ ${#activation_code} -lt 10 ]; then
+  echo "Activation code less than 10"
+  exit 1
+fi
+
+if [ ${#activation_id} -lt 10 ]; then
+  echo "Activation id less than 10"
+  exit 1
+fi
+
 # set the varibles for the api call
 type_header='Content-Type: application/json'
 auth_header="X-Authentication: $PT_token"
